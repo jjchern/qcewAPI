@@ -14,6 +14,10 @@ knitr::opts_chunk$set(
 
 # About
 
+[![Travis-CI Build Status](https://travis-ci.org/jjchern/qcewAPI.svg?branch=master)](https://travis-ci.org/jjchern/qcewAPI)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/jjchern/qcewAPI?branch=master&svg=true)](https://ci.appveyor.com/project/jjchern/qcewAPI)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/qcewAPI)](https://cran.r-project.org/package=qcewAPI)
+
 The goal of `qcewAPI` is to wrap the [QCEW Open Data Access RScript](http://data.bls.gov/cew/doc/access/data_access_examples.htm#RSCRIPT) 
 provided by the Bureau of Labor Statistics in an R package, and provide more 
 documentations and examples.
@@ -31,6 +35,26 @@ documentations and examples.
 ```R
 # install.packages("devtools")
 devtools::install_github("jjchern/qcewAPI")
+```
+
+# Usage
+
+## Get Annual Average QCEW Data for Michigan in 2013
+
+```{r}
+qcewAPI::get_area(year = "2013", qtr = "a", area = "26000")
+```
+
+## Get Q1-2013 QCEW Data for the Construction Industry
+
+```{r}
+qcewAPI::get_industry(year = "2013", qtr = "1", industry = "1012")
+```
+
+## Get 2013 QCEW Data for Establishment Size of 100--249
+
+```{r}
+qcewAPI::get_size(year = "2013", size = "6")
 ```
 
 # Related Documentation
