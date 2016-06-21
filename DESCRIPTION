@@ -1,0 +1,19 @@
+Package: qcewAPI
+Title: Access QCEW Data from the Bureau of Labor Statistics
+Version: 0.0.1
+Description: An R client for BLS's API for Quarterly Census of Employment and Wages (QCEW).
+Authors@R: c(
+        person("Jiajia", "Chen", , email = "jiajia.chern@gmail.com", role = c("ctb", "cre")),
+        person("U.S. Bureau of Labor Statistics", role = c("cph", "aut"))
+    )
+Depends:
+    R (>= 3.1.2)
+License: CC0
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/jjchern/qcewAPI
+BugReports: https://github.com/jjchern/qcewAPI/issues
+Imports:
+    tibble
+RoxygenNote: 5.0.1
+Suggests: testthat
